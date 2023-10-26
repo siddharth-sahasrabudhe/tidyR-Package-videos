@@ -1,0 +1,157 @@
+"","geoid","name","variable","estimate"
+"1","01","Alabama","pop_housed",4731852
+"2","01","Alabama","pop_renter",1434765
+"3","01","Alabama","median_rent",747
+"4","02","Alaska","pop_housed",710743
+"5","02","Alaska","pop_renter",241484
+"6","02","Alaska","median_rent",1200
+"7","04","Arizona","pop_housed",6656124
+"8","04","Arizona","pop_renter",2460534
+"9","04","Arizona","median_rent",972
+"10","05","Arkansas","pop_housed",2894098
+"11","05","Arkansas","pop_renter",965690
+"12","05","Arkansas","median_rent",709
+"13","06","California","pop_housed",38168482
+"14","06","California","pop_renter",17066023
+"15","06","California","median_rent",1358
+"16","08","Colorado","pop_housed",5318396
+"17","08","Colorado","pop_renter",1782975
+"18","08","Colorado","median_rent",1125
+"19","09","Connecticut","pop_housed",3478451
+"20","09","Connecticut","pop_renter",1053739
+"21","09","Connecticut","median_rent",1123
+"22","10","Delaware","pop_housed",918625
+"23","10","Delaware","pop_renter",255558
+"24","10","Delaware","median_rent",1076
+"25","11","District of Columbia","pop_housed",632449
+"26","11","District of Columbia","pop_renter",354285
+"27","11","District of Columbia","median_rent",1424
+"28","12","Florida","pop_housed",19847798
+"29","12","Florida","pop_renter",7099078
+"30","12","Florida","median_rent",1077
+"31","13","Georgia","pop_housed",9943137
+"32","13","Georgia","pop_renter",3592422
+"33","13","Georgia","median_rent",927
+"34","15","Hawaii","pop_housed",1377486
+"35","15","Hawaii","pop_renter",544005
+"36","15","Hawaii","median_rent",1507
+"37","16","Idaho","pop_housed",1627495
+"38","16","Idaho","pop_renter",483568
+"39","16","Idaho","median_rent",792
+"40","17","Illinois","pop_housed",12553961
+"41","17","Illinois","pop_renter",3930208
+"42","17","Illinois","median_rent",952
+"43","18","Indiana","pop_housed",6425770
+"44","18","Indiana","pop_renter",1860664
+"45","18","Indiana","median_rent",782
+"46","19","Iowa","pop_housed",3017668
+"47","19","Iowa","pop_renter",788828
+"48","19","Iowa","median_rent",740
+"49","20","Kansas","pop_housed",2823480
+"50","20","Kansas","pop_renter",869875
+"51","20","Kansas","median_rent",801
+"52","21","Kentucky","pop_housed",4293245
+"53","21","Kentucky","pop_renter",1348180
+"54","21","Kentucky","median_rent",713
+"55","22","Louisiana","pop_housed",4534218
+"56","22","Louisiana","pop_renter",1499963
+"57","22","Louisiana","median_rent",825
+"58","23","Maine","pop_housed",1294208
+"59","23","Maine","pop_renter",319823
+"60","23","Maine","median_rent",808
+"61","24","Maryland","pop_housed",5855584
+"62","24","Maryland","pop_renter",1834573
+"63","24","Maryland","median_rent",1311
+"64","25","Massachusetts","pop_housed",6538591
+"65","25","Massachusetts","pop_renter",2200434
+"66","25","Massachusetts","median_rent",1173
+"67","26","Michigan","pop_housed",9695870
+"68","26","Michigan","pop_renter",2594285
+"69","26","Michigan","median_rent",824
+"70","27","Minnesota","pop_housed",5357190
+"71","27","Minnesota","pop_renter",1350634
+"72","27","Minnesota","median_rent",906
+"73","28","Mississippi","pop_housed",2892138
+"74","28","Mississippi","pop_renter",923505
+"75","28","Mississippi","median_rent",740
+"76","29","Missouri","pop_housed",5900263
+"77","29","Missouri","pop_renter",1807005
+"78","29","Missouri","median_rent",784
+"79","30","Montana","pop_housed",1001023
+"80","30","Montana","pop_renter",303158
+"81","30","Montana","median_rent",751
+"82","31","Nebraska","pop_housed",1841687
+"83","31","Nebraska","pop_renter",564791
+"84","31","Nebraska","median_rent",773
+"85","32","Nevada","pop_housed",2850083
+"86","32","Nevada","pop_renter",1264660
+"87","32","Nevada","median_rent",1017
+"88","33","New Hampshire","pop_housed",1289641
+"89","33","New Hampshire","pop_renter",332722
+"90","33","New Hampshire","median_rent",1052
+"91","34","New Jersey","pop_housed",8774359
+"92","34","New Jersey","pop_renter",2944119
+"93","34","New Jersey","median_rent",1249
+"94","35","New Mexico","pop_housed",2041820
+"95","35","New Mexico","pop_renter",632683
+"96","35","New Mexico","median_rent",809
+"97","36","New York","pop_housed",19220855
+"98","36","New York","pop_renter",8299235
+"99","36","New York","median_rent",1194
+"100","37","North Carolina","pop_housed",9784981
+"101","37","North Carolina","pop_renter",3323467
+"102","37","North Carolina","median_rent",844
+"103","38","North Dakota","pop_housed",719063
+"104","38","North Dakota","pop_renter",230068
+"105","38","North Dakota","median_rent",775
+"106","39","Ohio","pop_housed",11296980
+"107","39","Ohio","pop_renter",3536857
+"108","39","Ohio","median_rent",764
+"109","40","Oklahoma","pop_housed",3786725
+"110","40","Oklahoma","pop_renter",1258591
+"111","40","Oklahoma","median_rent",766
+"112","41","Oregon","pop_housed",3936874
+"113","41","Oregon","pop_renter",1445270
+"114","41","Oregon","median_rent",988
+"115","42","Pennsylvania","pop_housed",12363237
+"116","42","Pennsylvania","pop_renter",3450829
+"117","42","Pennsylvania","median_rent",885
+"118","44","Rhode Island","pop_housed",1014551
+"119","44","Rhode Island","pop_renter",368641
+"120","44","Rhode Island","median_rent",957
+"121","45","South Carolina","pop_housed",4756406
+"122","45","South Carolina","pop_renter",1471275
+"123","45","South Carolina","median_rent",836
+"124","46","South Dakota","pop_housed",821456
+"125","46","South Dakota","pop_renter",239218
+"126","46","South Dakota","median_rent",696
+"127","47","Tennessee","pop_housed",6443385
+"128","47","Tennessee","pop_renter",2105024
+"129","47","Tennessee","median_rent",808
+"130","48","Texas","pop_housed",26815013
+"131","48","Texas","pop_renter",9442882
+"132","48","Texas","median_rent",952
+"133","49","Utah","pop_housed",2947466
+"134","49","Utah","pop_renter",823437
+"135","49","Utah","median_rent",948
+"136","50","Vermont","pop_housed",599387
+"137","50","Vermont","pop_renter",158240
+"138","50","Vermont","median_rent",945
+"139","51","Virginia","pop_housed",8123404
+"140","51","Virginia","pop_renter",2646920
+"141","51","Virginia","median_rent",1166
+"142","53","Washington","pop_housed",7027628
+"143","53","Washington","pop_renter",2474731
+"144","53","Washington","median_rent",1120
+"145","54","West Virginia","pop_housed",1788621
+"146","54","West Virginia","pop_renter",458746
+"147","54","West Virginia","median_rent",681
+"148","55","Wisconsin","pop_housed",5615789
+"149","55","Wisconsin","pop_renter",1673549
+"150","55","Wisconsin","median_rent",813
+"151","56","Wyoming","pop_housed",569009
+"152","56","Wyoming","pop_renter",165545
+"153","56","Wyoming","median_rent",828
+"154","72","Puerto Rico","pop_housed",3429847
+"155","72","Puerto Rico","pop_renter",1040651
+"156","72","Puerto Rico","median_rent",464
