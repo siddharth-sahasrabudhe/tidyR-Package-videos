@@ -1,0 +1,96 @@
+---
+title: "seperate ( ) function from tidyR package"
+output: html_document
+date: "sys.Date()"
+---
+
+Separate a character column into multiple columns with a regular expression or numeric locations.
+
+## Load the tidyverse package
+
+```{r}
+
+library(tidyverse)
+
+```
+
+## check mtcars data set
+
+```{r}
+
+head(mtcars) %>% view
+rownames(mtcars)
+
+```
+
+## Convert rownames into column as part of data set
+
+```{r}
+
+new_mtcars <- mtcars %>%
+  tibble::rownames_to_column("description") %>%
+  view
+
+```
+
+## seperate out the car model name and car company name
+
+```{r}
+
+new_mtcars <- new_mtcars %>%
+  separate_wider_delim(description," ",
+                       names = c("OEM","car_model"),
+                       too_many = "merge",
+                       too_few = "align_start") %>%
+  view
+```
+
+## use regular expressions to seperate the columns
+
+```{r}
+
+df <- tibble(var = c("race_1", "race_2", "age_bucket_1", "age_bucket_2"))%>%
+view
+
+df %>% separate_wider_regex(var, c(var1 = ".*", "_", 
+                                   var2 = ".*")) %>%  
+  view
+
+
+```
+
+
+## create dummy data
+
+```{r}
+product_sale <- tibble(product = c("product1","product2","product3","product4"),
+                       Geography = c("AP/507130","BR/800001","GJ/360001","MH/400001"),
+                       Sale=c(23,42,13,19))%>%
+  view
+
+```
+
+## seperate column using position
+
+```{r}
+
+
+product_sale1 <- product_sale %>%
+   separate_wider_position(Geography, c(State=2,1,pin_code= 6)) %>%
+  view
+
+```
+
+
+
+## Summary:
+
+`separate()` function seperates character column into multiple new columns. It uses three methods to seperate the character column:
+
+`separate_wider_delim()` splits the column by delimiter
+
+`separate_wider_regex()` splits by using regular expressions
+
+`separete_wider_position()` splits at fixed widths
+
+`separate()` function works only on character columns
