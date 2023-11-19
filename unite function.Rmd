@@ -1,0 +1,101 @@
+---
+title: "unite ( ) function from tidyr package"
+author: "Siddharth"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+The `unite( )` method is used to merge two or more columns into a single column or variable. `unite()` generates a single data frame as output after merging the specified columns.
+
+## Load the packages
+
+```{r}
+
+library(nycflights13)
+library(tidyverse)
+
+
+```
+
+## load the TB data-set
+
+```{r}
+
+table5%>%view
+
+
+```
+
+## use unite function
+
+```{r}
+
+table5 %>%
+  unite(new_column,year:century)%>%
+  view
+
+
+```
+
+## use "sep" argument to change the seperator
+
+```{r}
+
+table5 %>%
+  unite(new_column,year:century,sep="")%>%
+  view
+
+```
+
+## use "remove" argument to preserve the columns
+
+```{r}
+
+table5 %>%
+  unite(new_column,year:century,sep="",remove=FALSE)%>%
+  view
+
+```
+
+## unite function - flights data-set
+
+```{r}
+
+flights %>% sample_n(10) %>% glimpse
+
+
+```
+
+## combine the columns
+
+```{r}
+
+flights %>%
+  unite(new_date,1:3,sep="-",remove=FALSE)%>%
+  sample_n(10)%>%
+  glimpse()
+
+```
+
+## use mutate( ) function to change the data type
+
+```{r}
+
+flights %>%
+  unite(new_date,1:3,sep="-",remove=FALSE)%>%
+  mutate(new_date = as.Date(new_date))%>%
+  sample_n(10)%>%
+  glimpse()
+
+
+```
+
+## Summary:
+
+-    `unite()` function is used to combine the multiple columns
+
+-   The values from the multiple columns are combined together into one string. These values, by default are separated by underscore. If you want to use another separator symbol, you can use "*sep"* argument in the unite function
+
+-   use remove = FALSE flag to retain the columns from the original data frame
+
+-   The new column that has been created by unite () function has character data type.
