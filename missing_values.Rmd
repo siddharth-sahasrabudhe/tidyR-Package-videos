@@ -1,0 +1,100 @@
+---
+title: "How to deal with missing values using tidyR package"
+author: "Siddharth"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+### Load the packages
+
+```{r}
+
+library(tidyverse)
+library(nycflights13)
+
+```
+
+### Load the data-set
+
+```{r}
+
+flights <- flights %>% rownames_to_column("ID") 
+
+head(flights)
+
+
+```
+
+### Check the NA values in data set
+
+```{r}
+
+head(is.na(flights))
+
+sum(is.na(flights))
+
+```
+
+### Check NA values in each column of data set
+
+```{r}
+
+sapply(flights,function(x) sum(is.na(x))) %>% view
+
+```
+
+### Select few rows of the data-set
+
+```{r}
+
+flights_new <- flights %>% select(tailnum,arr_delay,dep_delay,arr_time)%>%
+  slice(c(20:30,472,478,616,755,13862,14667,14686,14856,1783,1785,11269:11273))%>%
+  view
+  
+```
+
+### Drop the rows with missing values
+
+```{r}
+
+flights_new[complete.cases(flights_new),] %>% view
+
+
+```
+
+### Drop rows with missing values - Columnwise
+
+```{r}
+
+flights_new %>% drop_na(dep_delay) %>% view
+
+```
+
+### replace missing values with some other value
+
+```{r}
+
+flights_new %>% replace_na(list(tailnum="NO DATA")) %>% view
+
+
+```
+
+### fill in the missing value with previous or next non missing value
+
+```{r}
+
+flights_new %>% fill(tailnum,.direction="up") %>% view
+
+flights_new %>% fill(tailnum,.direction="up") %>% fill(arr_delay,.direction="down")%>% view
+
+```
+
+### Summary:
+
+-   `complete.cases( )` function is used to drop the rows with missing values
+
+-   `drop_na()` function is used to check the missing values in specific column
+
+-   `replce_na()` function is used to replace the missing value with another values
+
+-   `fill()` function imputes the missing value with previous or next non-missing value
