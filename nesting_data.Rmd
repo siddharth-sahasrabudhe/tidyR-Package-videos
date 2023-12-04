@@ -1,0 +1,85 @@
+---
+title: "nesting and unnesting data using nest() and unnest() function"
+author: "Siddharth"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Load the package
+
+```{r}
+
+library(tidyverse)
+
+```
+
+## Load the data-set
+
+```{r}
+mtcars %>% view
+```
+
+## Visualize the data
+
+```{r}
+
+mtcars %>%
+  ggplot(aes(x=wt,y=mpg))+
+  geom_point(size=2)
+
+```
+
+## Fit the linear regression model
+
+```{r}
+
+model <- lm(mpg~wt,data=mtcars)
+model
+summary(model)
+
+```
+
+## tidy the model output
+
+```{r}
+
+broom::glance(model)
+
+```
+
+## create nested tibbles
+
+```{r}
+
+mtcars %>%
+  group_by(cyl)%>%
+  nest()%>%
+  view
+
+```
+
+## Run linear model on each group variable
+
+```{r}
+
+mtcars %>%
+  group_by(cyl)%>%
+  nest()%>%
+  mutate(model_fit = purrr::map(data,function(df) lm(mpg~wt,data=df)),model_output = purrr::map(model_fit,broom::glance))%>%
+  unnest(model_output)
+         
+```
+
+## Summary
+
+We created a list using `nest()` function by grouping a data frame with some grouping variable. Each group value will have its separate list, we got 3 separate lists for 3 separate grouping values.
+
+Each list has a tibble inside it.
+
+We train the linear regression model on each list using `map()` function from `purrr` package. Using `map()` function, we could iterate `lm()` function on each tibble within a list.
+
+We stored a model parameters in tidy format using `glance()` function from `broom` package
+
+The model parameters are stored as a list, we used `unnest()` function to convert the list back into a tibble.
+
+Finally, we got three separate model parameters for 3 separate groups using one elegant data pipeline.
